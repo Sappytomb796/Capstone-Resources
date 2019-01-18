@@ -1,0 +1,13 @@
+Commit messages:
+Title line should start with "Resources: " and then a one line description.  
+There should then be a blank line.  After that, a short description of what your
+commit is adding.  You should then add the line "Signed-off-by: " followed by 
+your name and email formated like this: <email@example.com> Lines should not
+exceed 80 characters.  There are commits already in place that follow this 
+format, please see them as a starting refference.
+
+File types to upload:
+.txt and .pdf are the most accessible.  If you are submitting a .txt file, do 
+not let lines exceed 80 characters.  This seems like a picky thing, this is
+the standard for the kernel and helps to keep things a little more readable.
+
