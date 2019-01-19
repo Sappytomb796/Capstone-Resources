@@ -1,0 +1,25 @@
+* Preffered e-mail: mflygare@pdx.edu
+
+* Phone number to text/call (only if needed/in case of emergency): 503-985-9644
+
+* Please list your 5 favorite songs: 
+    Bohemian Rhapsody - Queen
+    A Moment Apart - Odesza
+    Believer - Imagine Dragons
+    Seagulls (Stop It Now) - Bad Lip Reading
+    Short Change Hero - The Heavy
+    (and a lot of linkin park, metallica, classic rock, edm ambient stuff)
+
+* What skills/kinds of projects you are interested in for capstone (please limit this to a bullet list or no more than a single paragraph):
+    - Machine learning
+    - Computer Vision (no experience)
+    - Fullstack Application
+    - Cloud Computing
+    - High Performance Computing
+    - I am willing to work on and learn anything. The above list is my list of preferences.
+    
+* If you are working, where are you working and what is something you love about your job, and something you hate?  If you are not working, what is your hardest class you are in this term and what is one thing you love and one thing you hate?
+I have worked 3 internships but am not currently working one. 
+I loved rapidly learning new concepts and technology every week, and I hated fixing old, bad code.
+
+* github username so I can add you as a contributor and change the settings back to contributor only: mel-flygare96
