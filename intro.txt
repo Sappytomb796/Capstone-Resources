@@ -1,0 +1,32 @@
+* Preferred e-mail: 
+    - gnick@pdx.edu
+* Phone number to text/call (only if needed/in case of emergency):
+    - 206-235-4691
+* Please list your 5 favorite songs: 
+    In no particular order:
+        - Crystallised - Haken
+        - Flying Whales - Gojira
+        - Thick As A Brick - Jethro Tull
+        - Subdivisions - Rush
+        - Ancestral - Steven Wilson
+* What skills/kinds of projects you are interested in for capstone:
+    - Something low level, systems programming is extremely interesting to me
+    - Not much experience with web dev, would be interested in it to learn, 
+      might good for a project
+    - Something in a functional language or paradigm 
+      (might be a stretch that might not actually happen)
+* If you are working, where are you working and what is something you love 
+  about your job, and something you hate? 
+    - I work at a company called CorVel doing system administration. It's 
+      really tangential to development work, but I have gotten opportunities
+      to develop and deploy developed projects.
+    - Love:
+        - Developing an Outlook extension, packaging it up for an enterprise
+          environment, and deploying it to production.
+    - Hate:
+        - Early on especially, felt more like a support role than an
+          administration role, but it has expanded to a more administration
+          / development role.
+* github username so I can add you as a contributor and change the settings 
+  back to contributor only:
+    - gilben1
