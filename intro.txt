@@ -14,7 +14,8 @@ jmm23@pdx.edu
 * What skills/kinds of projects you are interested in for capstone (please limit this to a bullet list or no more than a single paragraph):
 - I’m really open for any kind of projects, but I do have a particular interest in computer graphics and recently machine learning.
 
-* If you are working, where are you working and what is something you love about your job, and something you hate?  If you are not working, what is your hardest class you are in this term and what is one thing you love and one thing you hate?
+* If you are working, where are you working and what is something you love about your job, and something you hate?  
+  If you are not working, what is your hardest class you are in this term and what is one thing you love and one thing you hate?
 - I'm not working at the moment, so my hardest class this term would be CS 454 Software Engineering.
 - One thing I love is sports (mostly basketball, football, bowling and weightlifting).
 - One thing I hate is waking up early, but it is a necessary thing we all have to do often!
