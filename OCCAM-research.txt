@@ -1,0 +1,31 @@
+Research into potential issues or roadblocks that may be encountered for the
+OCCAM Python Package Project
+
+- Roadblocks
+    - Existing python is kind of a huge mess
+        - Particularly the web-interfacing
+            https://github.com/occam-ra/occam/blob/master/py/weboccam.py
+        - Inconsistent style with some vague function wide operation descript-
+          -ion but little documentation on inner functionality.
+        - This might prove difficult to recreate into a package format
+            - ie, there will need to be significant time spent to understand
+              the current version in order to refactor into a new package
+            - Starting from scratch will be necessary, but not before underst-
+              -anding existing operation
+        - Inconsistent style between files, seems there was little standards
+          set for contribution to this project set thus far
+            - Definitely feels like a project started from 1990, spaghetti bu-
+              -ilt onto spaghetti
+        - However, there is a good amount of additional documentation written
+          recently for operation, which may make the inner working of the python
+          eventually evident
+            https://github.com/occam-ra/occam/tree/master/doc
+    - Current git repo doesn't have much set form for committing or flow, lots
+      of commits directly onto master it appears. Bart's contributions are the
+      ones that adhere to more OSS standards, but many of the others do not.
+        - Recently there seems to be the flow of using forked versions that get
+          pull requested into current master, but no separate branches on the
+          regular repository, which might be an issue to conform to if we were
+          to contribute (forks effectively acting as branches)
+    - Currently only seven lifetime issues in the repository, there may be more
+      existing issues unreported.
