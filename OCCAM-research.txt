@@ -29,3 +29,8 @@ OCCAM Python Package Project
           to contribute (forks effectively acting as branches)
     - Currently only seven lifetime issues in the repository, there may be more
       existing issues unreported.
+
+- Specifications
+  - Python package interfacing python interface, web interface, and C++ OCCAM engine
+  - Standard package structure, open source
+  - Compatibility with Machine Learning and data python packages
