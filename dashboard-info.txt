@@ -1,0 +1,36 @@
+Requirements, Similar Implementations, and Possible Roadblocks for
+Urban Performance Dashboard
+
+Develop a dynamic web-based interface that allows viewing of aggregate and specific datasets
+sourced from a central data server.
+
+Current implementation:
+	https://www.portlandoregon.gov/cbo/article/677023
+	
+Similar Dashboards:
+	http://performance.sandiego.gov/
+	https://www.melbourne.vic.gov.au/about-council/our-performance/Pages/performance-dashboard.aspx
+	https://www.bendoregon.gov/government/city-council/performance-dashboard
+	
+Key Requirements:
+	- Data sourced from server
+	- Web-based
+	- Dynamic representation
+	- Generated reports
+	- Multiple language support
+
+Liberties:
+	- Front-end and back-end implementation choice
+	- How the data is representated
+	
+Roadblocks:
+	- Heavy emphasis on the front-end representation of data
+	- Graphically arranging large amounts of data logically
+		- Nesting data according to category
+		- Developing an interface to inspect specific
+			categories
+		- Creating generic representations for similar
+			data types
+	- Aesthetic yet functional interface
+		- Avoid data saturation (current implementation)
+	- Communicating with data server
