@@ -10,6 +10,10 @@ To make your own branch:
 Pushing your branch to github:
    git push origin name-for-branch
 
+Merging master into your branch (Note: make sure you are on the branch you 
+want to change)
+     git checkout user-name-branch
+     git merge --no-ff master
 
 Team notes will include:
      * Planning Documents
