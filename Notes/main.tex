@@ -1,0 +1,51 @@
+\documentclass[11pt,letterpaper]{book}
+\usepackage[margin=0.75in]{geometry}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[normalem]{ulem}
+\usepackage{graphicx}
+\usepackage{color}
+%\usepackage{enumitem}
+\graphicspath{{./images/}{IR}}
+\usepackage{subfiles}
+\usepackage{blindtext}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\newcommand{\sectionmark}[1]{\markleft{#1}}
+\fancyhead{}
+\lhead{Notes}
+\chead{}
+\rhead{Alice Michael}
+\author{Alice Michael}
+\title{CS410 Network Optimization Notes}
+\date{}
+
+\newcommand{\onlyinsubfile}[1]{#1}
+\newcommand{\notinsubfile}[1]{}
+
+\newcommand{\arr}{$-->$    }
+
+\begin{document}
+\renewcommand{\onlyinsubfile}[1]{}
+\renewcommand{\notinsubfile}[1]{#1}
+
+
+\input{1-8} \newpage
+
+\input{Presentations} \newpage
+
+\input{Presentations-2} \newpage
+
+%\input{1-10} \newpage
+
+
+
+
+
+
+
+
+\end{document}
