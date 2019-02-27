@@ -1,0 +1,50 @@
+1. Where is the code that we would modify?
+
+    * Actions: ~/catkin_ws/src/ROBOTIS-OP3/op3_action_module/data/motion_4095.bin
+    * Action module to control actions: ~/catkin_ws/src/ROBOTIS-OP3/op3_action_module/src/action_module.cpp
+    * This is binary data. Need to use the action_editor module to edit and add poses
+    * Command: roslaunch op3_action_editor op3_action_editor.launch
+    * Currently cannot run. Recieving "Error Set port". May not happen with actual robot.
+
+2. Can we define a default pose?
+
+    * Section 5.6 in Robotis Tutorials
+    * Use action editor to create new actions / edit actions
+    * Also, init pose looks to be defined in a yaml file. Maybe we can define a default in another yaml.
+
+3. What can we assume when saying it is in a default? (e.x. can we assume that it can flow between poses to get upright)
+
+    * Poses are loaded from the binary file in the action_module.cpp file. Trajectories are calculated in base_module.
+        Maybe we can add a function in one of these to generate a pose to get to a goal position. 
+
+4. What should the default pose be?
+
+    * It seems the initial pose is the best pose to use as a default (standing mostly upright). 
+
+5. Adding a default, what code do we need to change to invoke that it goes to a default pose?
+
+    * Init pose info is saved in a yaml file in base module. This is loaded in for any function where initial
+        pose is called. Should be able to call our default pose when actions are dispatched.
+
+Poses
+
+1. Where is the code located that stores a pose?
+
+    * Action(pose): ~/catkin_ws/src/ROBOTIS-OP3/op3_action_module/data/motion_4095.bin
+
+2. Is it feasible to add new poses?
+
+    * New poses can be added with the action_editor module
+    * feasible, just takes time. Creating an action involves creating a series of changes in joint angle resolution
+
+3. What things would we need to add to be able to invoke the newly added pose?
+
+    * Action module to control actions: ~/catkin_ws/src/ROBOTIS-OP3/op3_action_module/src/action_module.cpp
+    * Above file dispatches actions. Appears to pull actions directly from motion_4095.bin.
+        Just need to invoke by action name / page number.
+    * op3 base module: ~/catkin_ws/src/ROBOTIS-OP3/op3_base_module/src/base_module.cpp
+        * This seems to be the file that controls joint trajectory calc, initial pose loading, etc.
+
+4. Where are those places located?
+
+* Note: op3_manager.cpp line 168 checks if robot
