@@ -1,0 +1,10 @@
+Defaults:
+1. Add function between action call and execution. Determine from action name if default pose should be executed first
+2. Pull in target pose in init function from YAML file
+3. Get current joint angles to generate initial position
+4. Maybe call initPoseTrajGenerateProc() to calculate the movement from init to target
+* base_module.cpp/initPoseTrajGenerateProc() -> Seems to generate movement between init pose and target
+
+Use Cases:
+1. Don't want robot to fall on face when thanking from rest pose
+2. Want robot to go back to init if in the middle of another pose

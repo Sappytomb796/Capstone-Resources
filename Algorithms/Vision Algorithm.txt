@@ -1,0 +1,33 @@
+Notes:
+1. Figure out the scope of the module changes
+2. Take images of ball in high and low light, interpolate value
+     * Which type of interpolation should we use?
+3. If interpolation doesn't work, may need to consider ML algorithm (clustering?)
+
+Algorithm:
+
+Creating Setting
+1. Take several images of a ball in various light levels
+2. Determine RGB from images
+    * Maybe average rgb of ball image chunk
+3. Create a normal distribution of color
+4. Save color range to a color setting 
+
+Using setting
+1. Load setting file for specific color
+2. Probabilistically search for the ball through the color range
+    * If camera can detect light level, can narrow distribution
+    * Maybe look into IR capabilities of camera?
+    * Can also calibrate light level using FOR objects?
+3. Sample the normal distribution every iteration, changing the hsv color value that the process() function looks for
+    * op3_ball_detector_node contains main loop
+    * sample from normal here, pass HSV value into process function
+* Need to determine how vision code looks for ball, and how to change that
+
+Use Cases:
+1. Demoing the soccer mode at different locations with different light levels (outside vs inside, for example)
+    * Don't want to manually tune the rgb for each location you're demoing in
+2. Want to test demo with different color balls
+3. Playing soccer in an area with varying light levels (shadows and such)
+4. Could open possibility of searching for different-colored balls at the same time
+    * Periodically sample from each normal distribution for each color
