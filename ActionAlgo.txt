@@ -1,0 +1,16 @@
+Generating new actions:
+
+1. Copy existing pose into empty page
+2. Make incremental changes to current STP
+3. Before adding new step, re-run page to get STP7 to make newest step
+4. Copy STP7 to next empty step
+5. Repeat 2 - 5 until satisfied
+6. Name, and save
+
+Test outside of action editor:
+1. Note page number
+2. Enter page number into Action tab field
+3. Run
+
+Button:
+1. Create button, calling function to run page number
