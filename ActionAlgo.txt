@@ -14,3 +14,7 @@ Test outside of action editor:
 
 Button:
 1. Create button, calling function to run page number
+
+Use Case:
+- Extend pool of usable actions
+- Entertainment
