@@ -1,4 +1,16 @@
-Generating new actions:
+Repositories to fork:
+https://github.com/ROBOTIS-GIT/ROBOTIS-OP3
+https://github.com/ROBOTIS-GIT/ROBOTIS-OP3-Tools
+
+Note before running action editor:
+Set terminal variable to NOT rxvt-unicode-256, it will crash otherwise
+Tested with rxvt as the term variable, but others might work
+
+=========================
+Generating new actions: |
+=========================
+>> Command: roslaunch op3_action_editor op3_action_editor.launch
+>> Location: ROBOTIS-OP3/op3_action_module/data/motion_4095.bin
 
 1. Copy existing pose into empty page
 2. Make incremental changes to current STP
@@ -7,14 +19,26 @@ Generating new actions:
 5. Repeat 2 - 5 until satisfied
 6. Name, and save
 
-Test outside of action editor:
+
+================================
+Test outside of action editor: |
+================================
+>> Command: 10.42.0.1, Actions tab
+
 1. Note page number
 2. Enter page number into Action tab field
 3. Run
 
-Button:
+=========
+Button: |
+=========
+>> Location: ROBOTIS-OP3-Tools/op3_web_setting_tool/html/index.html
+
 1. Create button, calling function to run page number
 
-Use Case:
+===========
+Use Cases: |
+===========
+
 - Extend pool of usable actions
 - Entertainment
