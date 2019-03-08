@@ -1,0 +1,62 @@
+Notes:
+1. Actions are set of joint states
+2. Playing action = publishing joint states sequentially
+3. Motion-Follower translates video input into joint states
+4. Web-interface would be convenient to handle recording/replaying/saving
+
+Motion-Follower: https://github.com/Seri-Lee/robotis_op3_following_motion
+
+*Starting position of action and ending position might conflict with current
+robot position: standardizing these would guarentee consistency*
+
+Joint State List Example: 
+Initial Pos -> state1 -> state2 -> ... -> stateN -> Initial Pos
+
+
+Flow:
+Init Robot	  Populate JStates	
+Initialization -> Record Action    ->   -Play Action 
+ 	       -> Retreive Action  -^   -Store Action
+
+
+Algorithms:
+	
+Initialization
+0. Create empty list of joint states
+1. Put robot into initial position
+2. Wait for command
+
+Recording Action
+1. Append initial joint state to list
+2. Begin "motion-following" mode
+	a. Append joint state as they are published to robot
+3. Check for stop command
+	exists:
+		Stop "motion-following" mode
+		Return to intial position, appending intermediate joint states
+	else:
+		Continue
+
+Verifying (Playing) Action
+1. Initial Position
+2. Iterate through list of joint states
+	a. Publish each to robot
+
+Storing Action
+1. Iterate through list of joint states
+2. For each joint state, write value to file	*JSON? YAML? TXT? Should each action be stored in a separate file?
+						*joint states are in specific order, only store value not name  ("it->second" in code)
+
+Retrieving Action
+1. Locate file for action
+2. Read values into local joint state list
+
+User Actions:
+ - Record
+ - Verify
+ - Store
+ - Retrieve
+
+Use Cases:
+ - Record arbitrary actions
+ - Store actions
