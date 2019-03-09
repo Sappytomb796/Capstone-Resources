@@ -28,8 +28,10 @@ Expected outcome if working:
 1. Don't want robot to fall on face when thanking from rest pose
 2. Want robot to go back to init if in the middle of another pose
 
-
-
+=========================
+|	Stories		|
+=========================
+  * YAML file to start setting things up
 
 
 /*******************************************************************************
@@ -80,9 +82,18 @@ Needs updated later
    time
     * Periodically sample from each normal distribution for each color
 
-
-
-
+=========================
+|	Stories		|
+=========================
+  * Tune and save data for red ball given
+  * Grab image and calculate most common pixel
+  * Start with high and low light to create range
+  * Figure out and apply calls to added functions
+Stretch Goal stories:
+  * Choose different colors
+  * update HTML to let you choose the color ball to look for
+  * feed colors to look for a range in that color
+  * Call the functions to create a range after finding the ball
 
 /*******************************************************************************
 *				ADDING ACTIONS                                 *
@@ -131,8 +142,12 @@ Command: 10.42.0.1, Actions tab
 - Extend pool of usable actions
 - Entertainment
 
-
-
+=========================
+|	Stories		|
+=========================
+  * Add Pages
+  * Update HTML to have new options
+  * Pose to add: Dab
 
 
 /*******************************************************************************
@@ -210,3 +225,14 @@ Needs updated later.
 =========================
  - Record arbitrary actions
  - Store actions
+
+=========================
+|	Stories		|
+=========================
+  * Create Format for saved states
+  * Grab joint movements 
+  * Write joint movements to file
+  * Create Save feature
+  * Create Delete saved feature
+  * Create Web interface in the HTML
+  * Modify HTML to have a tab for the new interface
