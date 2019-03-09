@@ -1,0 +1,212 @@
+/*******************************************************************************
+*                               DEFAULTS                                       *
+*******************************************************************************/
+=========================
+|	Algorithm	|
+=========================
+1. Add function between action call and execution. Determine from action name 
+   if default pose should be executed first
+2. Pull in target pose in init function from YAML file
+3. Get current joint angles to generate initial position
+4. Maybe call initPoseTrajGenerateProc() to calculate the movement from init 
+   to target
+   * base_module.cpp/initPoseTrajGenerateProc() -> Seems to generate movement 
+     between init pose and target
+
+=========================
+|	Testing		|
+=========================
+Start an action, part way through choose another action before the first
+finishes.
+Expected outcome if working: 
+	 * Goes to initial pose, and then executes new
+	   pose
+
+=========================
+|	Use Cases	|
+=========================
+1. Don't want robot to fall on face when thanking from rest pose
+2. Want robot to go back to init if in the middle of another pose
+
+
+
+
+
+/*******************************************************************************
+*                               VISION                                         *
+*******************************************************************************/
+Notes:
+1. Figure out the scope of the module changes
+2. Take images of ball in high and low light, interpolate value
+     * Which type of interpolation should we use?
+3. If interpolation doesn't work, may need to consider ML algorithm (clustering?)
+
+=========================
+|	Algorithm	|
+=========================
+Creating Setting
+1. Take several images of a ball in various light levels
+2. Determine RGB from images
+    * Maybe average rgb of ball image chunk
+3. Create a normal distribution of color
+4. Save color range to a color setting 
+
+Using setting
+1. Load setting file for specific color
+2. Probabilistically search for the ball through the color range
+    * If camera can detect light level, can narrow distribution
+    * Maybe look into IR capabilities of camera?
+    * Can also calibrate light level using FOR objects?
+3. Sample the normal distribution every iteration, changing the hsv color 
+   value that the process() function looks for
+    * op3_ball_detector_node contains main loop
+    * sample from normal here, pass HSV value into process function
+* Need to determine how vision code looks for ball, and how to change that
+
+=========================
+|	Testing		|
+=========================
+Needs updated later
+
+=========================
+|	Use Cases	|
+=========================
+1. Demoing the soccer mode at different locations with different light levels 
+   (outside vs inside, for example)
+    * Don't want to manually tune the rgb for each location you're demoing in
+2. Want to test demo with different color balls
+3. Playing soccer in an area with varying light levels (shadows and such)
+4. Could open possibility of searching for different-colored balls at the same 
+   time
+    * Periodically sample from each normal distribution for each color
+
+
+
+
+
+/*******************************************************************************
+*				ADDING ACTIONS                                 *
+*******************************************************************************/
+Repositories to fork:
+https://github.com/ROBOTIS-GIT/ROBOTIS-OP3
+https://github.com/ROBOTIS-GIT/ROBOTIS-OP3-Tools
+
+Note before running action editor:
+Set terminal variable to NOT rxvt-unicode-256, it will crash otherwise
+Tested with rxvt as the term variable, but others might work
+
+=========================
+|	Algorithm	|
+=========================
+>> Command: roslaunch op3_action_editor op3_action_editor.launch
+>> Location: ROBOTIS-OP3/op3_action_module/data/motion_4095.bin
+
+1. Copy existing pose into empty page
+2. Make incremental changes to current STP
+3. Before adding new step, re-run page to get STP7 to make newest step
+4. Copy STP7 to next empty step
+5. Repeat 2 - 5 until satisfied
+6. Name, and save
+
+
+Website Button: 
+Location: ROBOTIS-OP3-Tools/op3_web_setting_tool/html/index.html
+
+1. Create button, calling function to run page number
+
+=========================
+|	Testing		|
+=========================
+Test outside of action editor: 
+Command: 10.42.0.1, Actions tab
+
+1. Note page number
+2. Enter page number into Action tab field
+3. Run
+
+
+=========================
+|	Use Cases	|
+=========================
+- Extend pool of usable actions
+- Entertainment
+
+
+
+
+
+/*******************************************************************************
+*				  REPLAY                                       *
+*******************************************************************************/
+Notes:
+1. Actions are set of joint states
+2. Playing action = publishing joint states sequentially
+3. Motion-Follower translates video input into joint states
+4. Web-interface would be convenient to handle recording/replaying/saving
+
+Motion-Follower: https://github.com/Seri-Lee/robotis_op3_following_motion
+
+*Starting position of action and ending position might conflict with current
+robot position: standardizing these would guarentee consistency*
+
+Joint State List Example: 
+Initial Pos -> state1 -> state2 -> ... -> stateN -> Initial Pos
+
+
+Flow:
+Init Robot	  Populate JStates	
+Initialization -> Record Action    ->   -Play Action 
+ 	       -> Retreive Action  -^   -Store Action
+
+
+=========================
+|	Algorithm	|
+=========================	
+Initialization
+0. Create empty list of joint states
+1. Put robot into initial position
+2. Wait for command
+
+Recording Action
+1. Append initial joint state to list
+2. Begin "motion-following" mode
+	a. Append joint state as they are published to robot
+3. Check for stop command
+	exists:
+		Stop "motion-following" mode
+		Return to intial position, appending intermediate joint states
+	else:
+		Continue
+
+Verifying (Playing) Action
+1. Initial Position
+2. Iterate through list of joint states
+	a. Publish each to robot
+
+Storing Action
+1. Iterate through list of joint states
+2. For each joint state, write value to file	
+       * JSON? YAML? TXT? Should each action be stored in a separate file?
+       * joint states are in specific order, only store value not name  
+       	 ("it->second" in code)
+
+Retrieving Action
+1. Locate file for action
+2. Read values into local joint state list
+
+User Actions:
+ - Record
+ - Verify
+ - Store
+ - Retrieve
+
+=========================
+|	Testing		|
+=========================
+Needs updated later.
+
+=========================
+|	Use Cases	|
+=========================
+ - Record arbitrary actions
+ - Store actions
