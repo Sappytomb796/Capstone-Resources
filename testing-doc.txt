@@ -1,0 +1,18 @@
+Integration testing can be done seperately from code review, and after the code is already merged into the 
+master branch.  Therefore we need to make sure that everything is performing the way that it should be,
+and that there's not any negative side effects to other modules that the code added interacts with.
+Since we are running on a tight schedule, it is ok to assume that as long as the surface level of the code 
+it interacts with passes a green check, then it's good and the other module previously added will react
+accordingly.  During feature freeze we will run through a deep integration testing (time permitted...) 
+to scrub out any of the missed quirks from making this assumption and retest everything with good and 
+bad inputs.
+
+Things to check for:
+       1. Compiles
+       2. Expected reaction on good input
+       3. Expected reaction on all forms of bad input
+       4. Test that any modules that interact with the code being merged still 
+       	  work as expected.
+       	  EX. If you are doing things in replay, you should make sure that the defaults 
+	      still perform the way they are expected to since they cross pathes.
+       5. Submit new tickets with any bugs found
