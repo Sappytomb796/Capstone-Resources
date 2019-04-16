@@ -1,0 +1,36 @@
+When uploading code to the robot, you should start in your local repo, perform a git pull --rebase to 
+pull in any new commits and re-apply your local changes on top.  You can then fix any merging errors.
+Once the repo is in a good state, you should tar the entire directory one out from the repo.  You should
+tar it along the lines of "new version" or something to identify it as the new version as a sanity check.
+
+EX.
+   Repo name: ROBOTIS-OP3
+   desired tar name: new-repo-upload.tar.gz
+   
+   Command to run: tar -zcvf new-repo-upload.tar.gz ROBOTIS-OP3
+
+Now that you have your tarball, you'll want to transfer it into the robot.  I think the easiest way
+is SCP.  This will allow you to just have the commands but if you find a different way that retains 
+the integrity of the repo and it works for you it's ok to use.  For the example, I am assuming you 
+have not changed directories.
+
+EX.
+   scp new-repo-upload.tar.gz robotis@10.42.0.1:~/
+
+This will take a few mins to finish the upload as the size is somewhat large.
+Now you should ssh into the robot (see robot-booting if you've forgotten any of the information)
+mv the tar into the correct location you want to untar it.  The directory right before the repo
+that you are updating.  (ROBOTIS-OP3/..)
+Tar the old repo!  This is important as we will know that the old version is working and in case anything
+happens that reverting can't fix or a corruption occurs we can always just untar it later.  This is a 
+backup.  After tarring, you can untar the new repo.
+
+EX.
+   tar -zcvf old-ROBOTIS-OP3.tar.gz ROBOTIS-OP3
+   tar -xvf  new-repo-upload.tar.gz
+
+
+you can do a sanity check and cd into the new repo, do a git log to see that the new commits are in place,
+and then clean up the clutter of the "new-repo-upload.tar.gz" (it's not required, however when we deliver
+the robot we will be cleaning any tar.gz files and any other clutter left around so being in the 
+habit isn't a bad idea either)
