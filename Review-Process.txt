@@ -1,0 +1,33 @@
+This is the process once code is written that we should be following to review
+code.  Updates to the review process now that we have our feet under us will
+be updated and noted here.  There are a few instances that this model will
+not be appropriate for review, special circumstances can be worked out with
+the team lead otherwise this is the model we should follow.
+
+
+1.  Code written and pushed to appropriate dev branch
+
+2.  Pull request submitted on github
+
+3.  Kraken card placed into the Pull Request column
+
+4.  2 Reviews must be completed to merge into the master branch
+    i.  When a reviewer reviews the code, they should keep in mind
+    	if the commit message is clear and matches what the code is
+	doing.  If the reviewer has questions, they should ask them.
+    ii. When the reviewer is satisfied with the code in the state it's in, 
+    	they should add the Reviewed-by: name <email> line into the comments
+
+5.  Pull request submitter can merge into master, if they do not merge before
+    the following meeting it will be merged at the meeting as part of standup.
+
+6.  Can move Kraken card to merged
+
+7.  Integration testing on the robot should be done as close as possible to 
+    merge
+
+8.  If integration testing shows any bugs or things that need to be updated 
+    or optimized, new cards on kraken should be created in the needs picked
+    up column
+
+9.  The card for the original commit can be moved to the done done column
