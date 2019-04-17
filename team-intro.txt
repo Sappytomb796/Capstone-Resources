@@ -1,0 +1,101 @@
+Alice Michael
+* What skills/kinds of projects you are interested in for capstone
+        - I'm here to learn how to lead and to be a mentor.  I'm really
+	  interested in security and low level/systems programming and
+	  networking.  But my focus is on the first part of that since
+	  I already have an industry job in what I like.
+* If you are working, where are you working and what is something you love about
+  your job, and something you hate?
+	- I work at Intel on ethernet drivers.  I work with the Linux
+	  community and am a tree maintainer.  My responsibilities
+	  include communication with customers and the community,
+	  debugging code, and packaging drivers.
+	- One thing I love is the constant challenge of new things and things
+	  changing through innovation.
+	- One thing I hate is the push I get from the Customer team, PAE,
+	  to deliver things quicker than they can physically be done.
+
+Mason Berney
+* What skills/kinds of projects you are interested in for capstone
+        - Graphic representation of data
+	- Web development projects
+	- Anything that is useful since most school projects have been not so
+	  useful
+* If you are working, where are you working and what is something you love about
+  your job, and something you hate?
+	- I work for a company that does websites for horticultural businesses.
+	- The best part of the job is I get to work from home so my school
+	  schedule is easy to plan
+	- The worst part is because we all work remotely it can be hard to get
+	  responses from people
+
+Mel Flygare
+* What skills/kinds of projects you are interested in for capstone
+	- Machine learning
+	- Computer Vision (no experience)
+	- Fullstack Application
+	- Cloud Computing
+	- High Performance Computing
+* If you are working, where are you working and what is something you love
+  about your job, and something you hate?
+	- I have worked 3 internships but am not currently working one.
+	- I loved rapidly learning new concepts and technology every week,
+	  and I hated fixing old, bad code.
+
+Nicholas Gilbert
+* What skills/kinds of projects you are interested in for capstone:
+	- Something low level, systems programming is extremely interesting
+	  to me
+	- Not much experience with web dev, would be interested in it to learn,
+	  might good for a project
+	- Something in a functional language or paradigm
+	  (might be a stretch that might not actually happen)
+* If you are working, where are you working and what is something you love
+  about your job, and something you hate?
+	- I work at a company called CorVel doing system administration. It's
+	  really tangential to development work, but I have gotten opportunities
+	  to develop and deploy developed projects.
+	     - Love:
+		- Developing an Outlook extension, packaging it up for an
+		  enterprise environment, and deploying it to production.
+	     - Hate:
+		- Early on especially, felt more like a support role than an
+		  administration role, but it has expanded to a more
+		  administration/development role.
+
+Jordan Miller
+* What skills/kinds of projects you are interested in for capstone
+        - I’m really open for any kind of projects, but I do have a particular
+	  interest in computer graphics and recently machine learning.
+* What is your hardest class you are in this term and what is one thing you love
+  and one thing you hate?
+        - My hardest class this term would be CS 454 Software Engineering.
+	- One thing I love is sports (mostly basketball, football,
+	  bowling and weightlifting).
+	- One thing I hate is waking up early, but it is a necessary thing we
+	  all have to do often!
+
+
+Brady Testa
+* What kind of projects are you interested in?
+	- I am open to a lot of different projects, and I think it would
+	  really depend on a case by case basis. Something involving
+	  cryptography or quantum computing would be my highest
+	  interest, but a project using ML or AI would also be interesting
+	  as well.
+* What is your hardest class? What is one thing you love and one thing you hate?
+	- Hardest class this term is probably cryptography or number theory. I
+	  love math and computers, and hate getting sick.
+
+Brady Young
+* What skills/kinds of projects you are interested in for capstone
+	- Machine Learning
+	- Web Development
+	- Databases
+	- Mobile Application
+* If you are working, where are you working and what is something you love
+  about your job, and something you hate?
+	- I work weekends at a copy and print store. I love seeing the
+	  local art, comic sketches, and old photos that customers bring in.
+	- I dislike when orders are scheduled with insufficient time allotted
+	  between them to complete.
