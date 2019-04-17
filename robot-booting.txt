@@ -1,0 +1,11 @@
+To connect to the robot:
+   connect to the ROBOTIS-OP3-share hidden network
+   ssh robotis@10.42.0.1
+       111111
+
+To turn on the demo stuff:
+   roslaunch op3_demo demo.launch
+   On webbrowser, go to 10.42.0.1
+
+If you kill the roslaunch command, reload the webpage after restarting it and it will 
+be able to start doing things again
