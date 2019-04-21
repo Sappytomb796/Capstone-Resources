@@ -1,0 +1,24 @@
+* Preffered e-mail: malice@pdx.edu
+
+* Phone number: 503-686-5625
+
+* Please list your 5 favorite songs:
+  	 + Famous Last Words -- No Walls
+	 + NF -- Wake Up
+	 + Set It Off -- Nightmare
+	 + Never Shout Never -- On the Brightside
+	 + Hollywood Undead -- We Are
+* What skills/kinds of projects you are interested in for capstone
+        - I'm here to learn how to lead and to be a mentor.  I'm really
+	  interested in security and low level/systems programming and
+	  networking.  But my focus is on the first part of that since
+	  I already have an industry job in what I like.
+* If you are working, where are you working and what is something you love about
+  your job, and something you hate?  
+       I work at Intel on ethernet drivers.  I work with the Linux community and
+       am a tree maintainer.  My responsibilities include communication with 
+       customers and the community, debugging code, and packaging drivers.
+       One thing I love is the constant challenge of new things and things
+       changing through innovation.  One thing I hate is the push I get 
+       from the Customer team, PAE, to deliver things quicker than they can 
+       physically be done.
