@@ -8,6 +8,10 @@ the team lead otherwise this is the model we should follow.
 1.  Code written and pushed to appropriate dev branch
 
 2.  Pull request submitted on github
+    i.  In the body of the pull request, you should have the 
+    	title of the kraken cards that the pull request satisfies
+	to make it easier to track and to make it easier on the 
+	reviewers to mark off the right things.
 
 3.  Kraken card placed into the Pull Request column
 
