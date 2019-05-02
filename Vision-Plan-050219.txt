@@ -1,0 +1,19 @@
+Plan / Ideas for getting over hurdle of current data set being BGR causing a potentially incorrect model:
+
+Option 1:
+    a) Modify image saving callback to save in RGB instead of BGR
+    b) Retake dataset, with additional light scenarios with reflection shining off of the ball
+    c) Tweak model analysis to account for more than just B value
+    d) Create new model and import with current ball detection modifications
+
+Option 2:
+    a) Create script / small program using OpenCV imread and imwrite to take existing dataset from BGR to RGB
+    b) Steps c and d from Option 1
+
+=============================
+
+After hurdle:
+
+- Define method for tracking whether a detection is "good" ie. a circle is detected within the same range for X processing cycles
+    - Could use circles_ vector as a starting point to load into our own structure
+    - If not "good", re-run through function
