@@ -1,0 +1,19 @@
+
+light value int scoped in process()
+
+light value returned by applyDetectionSettings()
+    modify applyDetectionSettings to return current lightval
+
+boolean function to determine whether increment
+pass into config object updateConfig... (vec<doubles>, vec<doubles>, int)
+
+... process() {
+
+int light_val;
+
+...
+
+light_val = applyDetectionSettings()
+if (good(light_val)) {
+    config.updateConfig...(vec, vec, light_val)
+}
